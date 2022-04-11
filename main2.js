@@ -41,7 +41,7 @@ console.log(names)
 
 const sts = []
 for (let i = 0; i < students.length; i++) {
-    const  result = students[i].scores + 10
+    const  result = {...students[i], scores: students[i].scores + 10}
     sts[i] = result
 }
 console.log(sts)
