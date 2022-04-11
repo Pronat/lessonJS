@@ -29,6 +29,19 @@ const students = [
         isMarried: false,
         scores: 105,
     },
-
 ]
 
+const names = []
+
+for (let i = 0; i < students.length; i++) {
+    const result = students[i].name
+    names[i] = result
+}
+console.log(names)
+
+const sts = []
+for (let i = 0; i < students.length; i++) {
+    const  result = students[i].scores + 10
+    sts[i] = result
+}
+console.log(sts)
