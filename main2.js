@@ -29,5 +29,6 @@ const students = [
         isMarried: false,
         scores: 105,
     },
+
 ]
 
