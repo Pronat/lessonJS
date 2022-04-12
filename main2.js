@@ -45,3 +45,35 @@ for (let i = 0; i < students.length; i++) {
     sts[i] = result
 }
 console.log(sts)
+
+const myMap = (arrayScr, mapFn) => {
+    const arrayResult = []
+    for (let i = 0; i < arrayScr.length; i++) {
+        const result = mapFn(arrayScr[i])
+            arrayResult[i] = result
+    }
+    return arrayResult
+}
+console.log(myMap(students, s => s.name))
+console.log(myMap(students, s => {
+    return {...s, scores: s.scores + 10}
+} ))
+
+
+console.log(students.map(s => s.name))
+console.log(students.map(s => {
+    return {...s, scores: s.scores + 10}
+}))
+
+
+const myFilter = (arrayScr, filterFn) => {
+    const arrayResult = []
+    for (let i = 0; i < arrayScr.length; i++) {
+        if (filterFn(arrayScr[i]) === true) {
+            arrayResult.push(arrayScr[i])
+        }
+    }
+    return arrayResult
+}
+console.log(myFilter(students, s => s.scores < 100))
+console.log(students.filter(s => s.scores < 100))
