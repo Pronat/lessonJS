@@ -80,11 +80,11 @@ console.log(students.filter(s => s.scores < 100))
 
 
 const myFind = (arrayScr, findFn) => {
-    const arrayResult = []
     for (let i = 0; i < arrayScr.length; i++) {
-        if (findFn === arrayScr[i]) {
-            arrayResult.push(arrayScr[i])
+        if (findFn(arrayScr[i])) {
+            return arrayScr[i]
         }
     }
-    return arrayResult
 }
+console.log(myFind(students, s => s.name === "Bob"))
+console.log(students.find( s => s.name === "Bob"))
