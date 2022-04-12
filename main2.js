@@ -77,3 +77,14 @@ const myFilter = (arrayScr, filterFn) => {
 }
 console.log(myFilter(students, s => s.scores < 100))
 console.log(students.filter(s => s.scores < 100))
+
+
+const myFind = (arrayScr, findFn) => {
+    const arrayResult = []
+    for (let i = 0; i < arrayScr.length; i++) {
+        if (findFn === arrayScr[i]) {
+            arrayResult.push(arrayScr[i])
+        }
+    }
+    return arrayResult
+}
