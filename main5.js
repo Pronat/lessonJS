@@ -4,15 +4,15 @@ const names = ["Donald", "Fedor", "Bob", "Alex", "101", "Игорь"]
 console.log(names.sort())
 console.log([...names].sort())
 
-const numbers = [1000, 2, 33, 4, 5]
+const numbers = [1000, 2, 3345, 4, 5]
 // console.log(numbers.sort())
 const compFn = (a, b) => {
-    if(a > b) {
+    if (a > b) {
         return 999
     }
     return -100
 }
-console.log([...numbers].sort((a, b)=>b - a))  //сортируем числа, а не строки
+console.log([...numbers].sort((a, b) => b - a))  //сортируем числа, а не строки
 
 const students = [
     {
@@ -49,10 +49,11 @@ const students = [
 console.log([...students].sort((a, b) => a.age - b.age))
 console.log([...students].sort((a, b) => a.name < b.name ? -1 : 1))
 
-
-for (let i = 0; i < numbers.length - 1; i++) {
-    if (numbers[i] > numbers[i+1]) {
-        [numbers[i], numbers[i + 1]] = [numbers[i + 1], numbers[i]]
+for (let j = 0; j < numbers.length - 1; j++) {
+    for (let i = 0; i < numbers.length - 1 - j; i++) {
+        if (numbers[i] > numbers[i + 1]) {
+            [numbers[i], numbers[i + 1]] = [numbers[i + 1], numbers[i]]
+        }
     }
 }
 console.log(numbers)
