@@ -39,3 +39,8 @@ const user = {
     friends: ["Alex", "Nick", "John"]
 }
 
+let copyUser = {...user}
+console.log(user===copyUser)
+console.log(user.friends===copyUser.friends)
+
+
