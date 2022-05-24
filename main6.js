@@ -45,5 +45,11 @@ console.log(user.friends===copyUser.friends)
 
 let deepCopyUser = {...user, friends: [...user.friends]}
 
+let copyStudents = [...students]
+console.log(copyStudents === students)
+console.log(copyStudents[1] === students[1])
 
-
+// let deepCopyStudents = students.map(s=>({...s}))
+let deepCopyStudents = students.map(s=>{
+    return{...s}
+})
