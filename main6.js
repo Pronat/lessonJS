@@ -54,16 +54,23 @@ let deepCopyStudents = students.map(s=>{
     return{...s}
 })
 
-const sortFn = (a, b) => {
-    switch (a.scores < b.scores) {
-        case true:
-            return 1
-        case false:
-            return -1
-        default:
-            return 0
-    }
-}
+// const sortFn = (a, b) => {
+//     switch (a.scores < b.scores) {
+//         case true:
+//             return 1
+//         case false:
+//             return -1
+//         default:
+//             return 0
+//     }
+// }
 
-let sortByName = students.sort(sortFn)
+// let sortByName = students.sort(sortFn)
+let sortByName = deepCopyStudents.sort((a,b)=>a.name>b.name ? 1 : -1)
 console.log(sortByName)
+
+let sortByScores = deepCopyStudents.sort((a, b)=>b.scores > a.scores ? 1 : -1)
+console.log(sortByScores)
+
+let bestStudents = deepCopyStudents.filter(f=>f.scores >= 100)
+console.log(bestStudents)
