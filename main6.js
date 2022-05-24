@@ -20,7 +20,7 @@ const students = [
         scores: 120,
     },
     {
-        name: "John",
+        name: "Ann",
         age: 19,
         isMarried: false,
         scores: 100,
@@ -92,3 +92,11 @@ console.log(students)
 let studentsNames = students.map(st=>st.name)
 studentsNames.join(', ')
 console.log(studentsNames)
+
+let trueStudent = students.map(st=>({...st, isStudent: true}))
+console.log(trueStudent)
+
+let studentMarriedNick = students.map(st=>st.name==="Nick" ? {...st, isMarried: true} : st)
+console.log(studentMarriedNick)
+
+let studentMarriedNick = students.
