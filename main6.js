@@ -84,3 +84,11 @@ console.log(newDeepCopyStudents)
 
 let newDeepCopyStudents2 = [...topStudents, ...deepCopyStudents]  //копируем через spred оператор
 console.log(newDeepCopyStudents2)
+
+let notMarried = students.filter(st=>!st.isMarried)
+console.log(notMarried)
+console.log(students)
+
+let studentsNames = students.map(st=>st.name)
+studentsNames.join(', ')
+console.log(studentsNames)
