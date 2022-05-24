@@ -102,5 +102,5 @@ console.log(studentMarriedNick)
 let studentANN = students.find(st=>st.name==="Ann")
 console.log(studentANN)
 
-let BestStudent = students.reduce((acc, st) => acc > st.scores ? acc: st)  //если первое значение(аккумулятор больше  st, то идем дальше
+let BestStudent = students.reduce((acc, st) => acc.scores > st.scores ? acc: st)  //если первое значение(аккумулятор больше  st, то идем дальше
 console.log(BestStudent)
