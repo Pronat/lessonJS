@@ -99,4 +99,8 @@ console.log(trueStudent)
 let studentMarriedNick = students.map(st=>st.name==="Nick" ? {...st, isMarried: true} : st)
 console.log(studentMarriedNick)
 
-let studentMarriedNick = students.
+let studentANN = students.find(st=>st.name==="Ann")
+console.log(studentANN)
+
+let BestStudent = students.reduce((acc, st) => acc > st.scores ? acc: st)  //если первое значение(аккумулятор больше  st, то идем дальше
+console.log(BestStudent)
