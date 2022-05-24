@@ -74,3 +74,13 @@ console.log(sortByScores)
 
 let bestStudents = deepCopyStudents.filter(f=>f.scores >= 100)
 console.log(bestStudents)
+
+let topStudents = deepCopyStudents.splice(0, 3, true, 32, 'erttev')  //начинает со старт, удаляет и добавляет
+console.log(topStudents)
+console.log(deepCopyStudents)
+
+let newDeepCopyStudents = topStudents.concat(deepCopyStudents) //объеденяет массивы
+console.log(newDeepCopyStudents)
+
+let newDeepCopyStudents2 = [...topStudents, ...deepCopyStudents]  //копируем через spred оператор
+console.log(newDeepCopyStudents2)
