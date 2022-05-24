@@ -104,3 +104,9 @@ console.log(studentANN)
 
 let BestStudent = students.reduce((acc, st) => acc.scores > st.scores ? acc: st)  //если первое значение(аккумулятор больше  st, то идем дальше
 console.log(BestStudent)
+
+let SumScore = students.reduce((acc, st)=>acc+st.scores, 0)
+console.log(SumScore)
+
+let addFriend = students.map(st=>({...st, friends: [...students.map(st=>st.name)]}))
+console.log(addFriend)
