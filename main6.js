@@ -53,3 +53,17 @@ console.log(copyStudents[1] === students[1])
 let deepCopyStudents = students.map(s=>{
     return{...s}
 })
+
+const sortFn = (a, b) => {
+    switch (a.scores < b.scores) {
+        case true:
+            return 1
+        case false:
+            return -1
+        default:
+            return 0
+    }
+}
+
+let sortByName = students.sort(sortFn)
+console.log(sortByName)
