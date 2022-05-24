@@ -43,4 +43,7 @@ let copyUser = {...user}
 console.log(user===copyUser)
 console.log(user.friends===copyUser.friends)
 
+let deepCopyUser = {...user, friends: [...user.friends]}
+
+
 
