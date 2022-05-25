@@ -18,5 +18,5 @@ let a = {
 }
 let b = {...a}
 b.classsroom.teacher.name = 'Alexander'
-console.log(a)
-console.log(b)
+console.log(a === b)
+console.log(a.students === b.students)
