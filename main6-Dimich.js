@@ -10,6 +10,7 @@ let state = {
     age: 1,
     school: {
         address: 'Minsk',
+        students:[{},{},{}],
         director: {
             name: 'Andrey'
         }
@@ -21,6 +22,7 @@ let b = {
     age: 2,          //скопировали age и заменили его с 1 на 2
     school: {
         ...state.school,   //скопировали address
+        students: state.school.students.map(el=>({...el})),     // c помощью map закопировали  массив
         director: { ...state.school.director }   //скопировали director, который находится глубже
 }}
 
