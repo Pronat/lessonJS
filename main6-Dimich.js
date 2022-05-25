@@ -19,5 +19,7 @@ let state = {
 let b = {
     ...state,
     age: 2,                //скопировали age и заменили его с 1 на 2
-    school: {...state.school}      //скопировали address
-}
+    school: {
+        ...state.school,   //скопировали address
+        director: { ...state.school.director } //скопировали director, который находится глубже
+}}
