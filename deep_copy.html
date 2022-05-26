@@ -43,8 +43,8 @@
     };
 
     let man2FullCopy = {
-        ...man2,
-        friends.map(fr=>({...fr}))
+       ...man2,
+        friends: [...man2.friends]
     }
     console.log(man2FullCopy)
     // your code
@@ -58,7 +58,13 @@
     ];
 
 
-    let peopleFullCopy  // your code
+    let peopleFullCopy = [
+        people.map(el=>({...el}))
+    ]
+    console.log(people)
+    console.log(peopleFullCopy)
+
+    // your code
 
 
     // 6 Array of objects inside object
@@ -72,7 +78,14 @@
         ]
     };
 
-    let man3FullCopy //  your code
+    let man3FullCopy = {
+        ...man3,
+        friends: man3.friends.map(el=>({...el}))
+    }
+    man3.friends[1].name = 'DOdododo'
+    console.log(man3)
+
+    //  your code
 
 
     // 7 Object inside an object, inside an object
@@ -89,7 +102,14 @@
         }
     };
 
-    let man4FullCopy //  your code
+    let man4FullCopy = {
+        ...man4,
+        mother: {...man4.mother,
+        work: {...man4.mother.work} }
+    }
+    console.log(man4FullCopy)
+
+    //  your code
 
     // 8 Array of objects inside object -> object
     let man5 = {
