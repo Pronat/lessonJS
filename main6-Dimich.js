@@ -19,7 +19,7 @@ let state = {
 
 let b = {
     ...state,          //поверхностная копия объекта с помощью spred оператора
-    age: 2,          //скопировали age и заменили его с 1 на 2
+    age: 2,          //скопировали age и заменили его значение с 1 на 2
     school: {
         ...state.school,   //скопировали address
         students: state.school.students.map(el=>({...el})),     // c помощью map закопировали  массив
