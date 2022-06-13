@@ -229,7 +229,9 @@
         mother: {...man7.mother,
             work: {...man7.mother.work},
             parents: man7.mother.parents.map(el=>({...el,
-                favoriteDish: {...man7.mother.parents.favoriteDish}}))}
+                favoriteDish: {...man7.mother.parents.favoriteDish,
+                ingredients: man7.mother.parents.favoriteDish.ingredients.map(el=>({...el}))}
+            }))}
     }
-
+    console.log(man7FullCopy)
 </script>
