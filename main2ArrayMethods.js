@@ -1,5 +1,3 @@
-console.log(11111)
-
 let students = [
     {
         name: 'Bob',
@@ -33,9 +31,11 @@ const GetNames = (array) => {
 }
 const GetNames2 = (array) => {
     let array1 = []
+    // let array1 = new Array()  //можно так создавать
     for (let i = 0; i < array.length; i++) {
         array1.push(array[i].name)
     }
     return array1
 }
+console.log(GetNames(students))
 console.log(GetNames2(students))
