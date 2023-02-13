@@ -38,10 +38,9 @@ const GetNames2 = (array) => {
     return array1
 }
 
-const addScores = (array) => {
-    let copy = {...array}
-    copy.scores = array.scores + 10
-    return copy
+const addScores = (arr) => {
+    let copy = {...arr}
+    return copy.scores
+}
 
-     }
 console.log(addScores(students))
