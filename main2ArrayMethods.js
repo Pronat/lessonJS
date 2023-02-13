@@ -38,9 +38,4 @@ const GetNames2 = (array) => {
     return array1
 }
 
-const addScores = (arr) => {
-    let copy = {...arr}
-    return copy.scores
-}
-
-console.log(addScores(students))
+// Array.prototype.методМассива //все методы массива хранятся там, мы можем создать новый метод массива
