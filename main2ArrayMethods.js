@@ -37,5 +37,11 @@ const GetNames2 = (array) => {
     }
     return array1
 }
-console.log(GetNames(students))
-console.log(GetNames2(students))
+
+const addScores = (array) => {
+    let copy = {...array}
+    copy.scores = array.scores + 10
+    return copy
+
+     }
+console.log(addScores(students))
