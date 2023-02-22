@@ -2,6 +2,8 @@
 // callback => handler, setTimeout/setInterval, param of array method  //это все callback
 
 const sm = document.getElementById('small')
+const md = document.getElementById('medium')
+const bg = document.getElementById('big')
 const handler1 = (e) => {
     console.log(e)
 }
@@ -18,4 +20,5 @@ sm.removeEventListener('click', handler1)  //удалили handler1
 
 // всплытие, более распространено (99 %). Событие произошло в самом внутреннем элементе, а потом начало подниматься наружу.
 // погружение
-
+// e.target - место создания события
+// e.currentTarget - место нахождения события, используем его, т.к. может быть добавлен новый элемент, изменится вложенность и e.target не работает
