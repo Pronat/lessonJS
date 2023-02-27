@@ -27,16 +27,16 @@ const todolists = [
 ]
 
 const tasks = {
-    "Todolist Name 1": [
+    [todolistId1]: [
     {id: 4, title: "HTML2", isDone: false},
     {id: 5, title: "CSS2", isDone: false},
     {id: 6, title: "React2", isDone: false},
 ],
-    "Todolist Name 2": [
+    [todolistId2]: [
         {id: 4, title: "HTML2", isDone: false},
         {id: 5, title: "CSS2", isDone: false},
         {id: 6, title: "React2", isDone: false},
     ],
 }
 
-console.log(tasks[todolists[0].title].map((el)=>el.title + "qwerty"))
+console.log(tasks[todolistsId[0].title].map((el)=>el.title + "qwerty"))
