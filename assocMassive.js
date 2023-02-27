@@ -10,16 +10,14 @@ const user = {
     }
 }
 
-console.log(user.address.city.title)
-console.log(user['address']['city']['title'])
-console.log(user['age'])
 
 const names = {
-    '1': "val",
-    '2': "sd",
-    '3': "asdg",
-    '4': "grhtjtj",
+    '1': {id: 101, name: 'Alex'},
+    '2': {id: 1, name: 'Bob'},
+    '3': {id: 23, name: 'Cat'},
+    '4': {id: 167, name: 'Volt'},
 }
 names[12] ='EEEERR'
 names['Привет мужик']= 'у меня все отлично'
-console.log(names['Привет мужик'])
+
+console.log(Object.values(names))
