@@ -1,8 +1,11 @@
 console.log('Js lesson 4')
 
-export const todolists = [
+const todolistId1 = "3243-343"
+const todolistId2 = "343443-34355"
+
+const todolists = [
     {
-        id: "3243-343",
+        id: todolistId1,
         title: "Todolist Name 1",
         filter: "all",
         tasks: [
@@ -12,7 +15,7 @@ export const todolists = [
         ]
     },
     {
-        id: "343443-34355",
+        id: todolistId2,
         title: "Todolist Name 2",
         filter: "all",
         tasks: [
@@ -34,5 +37,6 @@ const tasks = {
         {id: 5, title: "CSS2", isDone: false},
         {id: 6, title: "React2", isDone: false},
     ],
-
 }
+
+console.log(tasks[todolists[0].title].map((el)=>el.title + "qwerty"))
