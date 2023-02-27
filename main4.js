@@ -39,4 +39,13 @@ const tasks = {
     ],
 }
 
-console.log(tasks[todolistsId[0].title].map((el)=>el.title + "qwerty"))
+console.log(tasks[todolists[0].id][1].title)
+
+
+//reduce - сокращает массив
+const nums = [3,6,2,7,8]
+console.log(
+   nums.reduce((acc, el)=>{
+       return acc + el
+   }, 2)
+)
