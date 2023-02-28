@@ -43,9 +43,16 @@ console.log(tasks[todolists[0].id][1].title)
 
 
 //reduce - сокращает массив
-const nums = [3,6,2,7,8]
+const nums = [23, 12, 6, 99, 1]
 console.log(
-   nums.reduce((acc, el)=>{
-       return acc + el
-   }, 2)
+   nums.reduce((acc, el)=> {
+      return acc + el
+   }, 0)
 )
+
+console.log(
+   nums.reduce((acc, el)=>acc > el ? acc : el )
+)
+
+
+
