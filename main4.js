@@ -51,7 +51,7 @@ console.log(
 )
 
 console.log(
-   nums.reduce((acc, el)=>acc > el ? acc : el )
+   nums.reduce((acc, el)=> acc > el ? acc : el )
 )
 
 
