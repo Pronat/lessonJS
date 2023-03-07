@@ -30,4 +30,15 @@ const students = [
         scores: 200
     },
 ]
-console.log(students.sort((a, b)=>a.name - b.name ))
+console.log(students.sort((a, b)=>a.name - b.name )) //сортировка массива
+
+
+const nums = [23, 532, 66, 1 , 6, 56]
+for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] > nums[i+1]) {
+        let temp = nums[i]
+        nums[i] = nums[i+1]
+        nums[i+1] = temp
+    }
+}
+console.log(nums)
