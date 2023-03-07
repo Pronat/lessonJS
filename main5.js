@@ -34,11 +34,16 @@ console.log(students.sort((a, b)=>a.name - b.name )) //сортировка ма
 
 
 const nums = [23, 532, 66, 1 , 6, 56]
-for (let i = 0; i < nums.length - 1; i++) {
-    if (nums[i] > nums[i+1]) {
-        let temp = nums[i]
-        nums[i] = nums[i+1]
-        nums[i+1] = temp
+for (let j = 0; j < nums.length - 1 - j; j++) {
+    let isSorted = true
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] > nums[i+1]) {
+            isSorted = false
+            let temp = nums[i]
+            nums[i] = nums[i+1]
+            nums[i+1] = temp
+        }
     }
+    if(isSorted)break
 }
-console.log(nums)
+console.log(nums)                       // самописный метод сортировки пузырьком
