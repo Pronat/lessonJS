@@ -1,5 +1,33 @@
 console.log("Main5")
 
-const name = ["Onix", "Alex", "Fred", "alex", "aLex", "игорь", "Юрий"]
+
 // Сортировка
+const name = ["Onix", "Alex", "Fred", "alex", "aLex", "игорь", "Юрий"]
 console.log(name.sort()===name) //true, работает мутабельно, возвращает ссылку на массив
+
+const numbers = [44, 566, 22, 7, -2, 46456]
+console.log(numbers.sort((a, b)=>   a - b)) // сортировка чисел по возрастанию
+console.log(numbers.sort((a, b)=>   b - a )) // сортировка чисел по убыванию
+
+
+const students = [
+    {
+        name: "Alex",
+        age:12,
+        isMarried: false,
+        scores: 114
+    },
+     {
+        name: "Bob",
+        age:24,
+        isMarried: true,
+        scores: 87
+    },
+     {
+        name: "Don",
+        age:99,
+        isMarried: true,
+        scores: 200
+    },
+]
+console.log(students.sort((a, b)=>a.name - b.name ))
