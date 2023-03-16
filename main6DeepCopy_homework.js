@@ -27,7 +27,9 @@
             age: 50
         }
     };
-    let man1FullCopy = {...man1, mother: {...man1.mother}}
+    let man1FullCopy = {...man1, mother: {...man1.mother}}  //чтобы это была не просто ссылка зашли в mother и скопировали его отдельно, теперь это разные массивы
+    man1.mother.name = 'Bob'
+    console.log(man1)
     console.log(man1FullCopy)
 
     // 4. Array of primitives inside an object
@@ -37,7 +39,10 @@
         friends: ["Peter", "Steven", "William"]
     };
 
-    let man2FullCopy  // your code
+    let man2FullCopy = {...man2, friends: [...man2.friends] }
+    man2.friends[0] = "11111"
+    console.log(man2)
+    console.log(man2FullCopy)
 
 
     // 5 Array of objects
