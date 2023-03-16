@@ -53,15 +53,15 @@ console.log(user === copyUser);  //false
 console.log(user.friends === copyUser.friends);  //true (ссылка на один и тот же объект)
 k
 //2. Полная (глубокая) копия student
-const deepCopyStudent = { ...user, friends: [...user.friends] };
-console.log(user === deepCopyStudent);
-console.log(user.friends === deepCopyStudent.friends);
+const deepCopyStudent = { ...user, friends: [...user.friends] }; // заходим внутрь user и копируем его свойство friends
+console.log(user === deepCopyStudent); //false
+console.log(user.friends === deepCopyStudent.friends);  //false, т.к. теперь ссылки на разные массивы
 
 //3. Поверхностная копия students
 const copyStudents = [...students];
 slice()
-console.log(students === copyStudents);
-console.log(students[0] === copyStudents[0]);
+console.log(students === copyStudents);  //false
+console.log(students[0] === copyStudents[0]);  //true (ссылка на один и тот же массив)
 
 //4*. Полная (глубокая) копия students
 const deepCopyStudents = students.map((st) => ({ ...st }));
