@@ -45,7 +45,7 @@ const user = {
     friends: ["Alex", "Nick", "John"],
 };
 
-https://www.dev-notes.ru/articles/deep-copying-using-structured-clone/
+// https://www.dev-notes.ru/articles/deep-copying-using-structured-clone/
 
 //1. Поверхностная копия student
     let copyUser = { ...user }; // Object
@@ -64,9 +64,9 @@ console.log(students === copyStudents);  //false
 console.log(students[0] === copyStudents[0]);  //true (ссылка на один и тот же массив)
 
 //4*. Полная (глубокая) копия students
-const deepCopyStudents = students.map((st) => ({ ...st }));
-console.log(students === deepCopyStudents);
-console.log(students[0] === deepCopyStudents[0]);
+const deepCopyStudents = students.map((st) => ({ ...st }));   //вернуло новый массив
+console.log(students === deepCopyStudents);  //false
+console.log(students[0] === deepCopyStudents[0]);  //false
 console.log(students);
 console.log(deepCopyStudents);
 
