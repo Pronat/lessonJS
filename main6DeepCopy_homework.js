@@ -112,7 +112,7 @@
         }
     };
 
-    let man5FullCopy = {...man5, mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(el=>({el}))]}}
+    let man5FullCopy = {...man5, mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(el=>({...el}))]}}
     man5.mother.work.position = '11111'
     man5.mother.parents[0].age = 100
     console.log(man5)
@@ -148,8 +148,10 @@
         }
     };
 
-    let man6FullCopy  //  your code
-
+    let man6FullCopy = {...man6, mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(el=>({...el, favoriteDish: {...man5.mother.parents.favoriteDish} }))]}}
+    man6.mother.parents[0].favoriteDish.title = "zorro"
+    console.log(man6)
+    console.log(man6FullCopy)
 
     //10 Array of objects inside an object -> object -> array -> object ->  object
     let man7 = {
