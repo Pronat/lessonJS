@@ -148,8 +148,8 @@
         }
     };
 
-    let man6FullCopy = {...man6, mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(el=>({...el, favoriteDish: {...man5.mother.parents.favoriteDish} }))]}}
-    man6.mother.parents[0].favoriteDish.title = "zorro"
+    let man6FullCopy = {...man6, mother: {...man5.mother, work: {...man6.mother.work}, parents: [...man6.mother.parents.map(el=>({...el, favoriteDish: {...el.favoriteDish} }))]}}
+    man6.mother.parents[0].favoriteDish.title = "123456789"
     console.log(man6)
     console.log(man6FullCopy)
 
@@ -192,4 +192,8 @@
         }
     };
 
-    let man7FullCopy  //  your code
+    // let man7FullCopy  = {...man7, mother: {...man7.mother, work: {...man7.mother.work}, parents: [...man7.mother.parents.map(el=>({
+    //             ...el, favoriteDish: {...man7.mother.parents.favoriteDish, ingredients: [...man7.mother.parents.favoriteDish.ingredients.map(el=>({...el}))] } }))]}}
+    // man6.mother.parents[0].favoriteDish.ingredients[0].title = "milk"
+    // console.log(man7)
+    // console.log(man7FullCopy)
