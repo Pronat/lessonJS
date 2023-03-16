@@ -192,8 +192,8 @@
         }
     };
 
-    // let man7FullCopy  = {...man7, mother: {...man7.mother, work: {...man7.mother.work}, parents: [...man7.mother.parents.map(el=>({
-    //             ...el, favoriteDish: {...man7.mother.parents.favoriteDish, ingredients: [...man7.mother.parents.favoriteDish.ingredients.map(el=>({...el}))] } }))]}}
-    // man6.mother.parents[0].favoriteDish.ingredients[0].title = "milk"
-    // console.log(man7)
-    // console.log(man7FullCopy)
+    let man7FullCopy  = {...man7, mother: {...man7.mother, work: {...man7.mother.work}, parents: [...man7.mother.parents.map(el=>({
+                ...el, favoriteDish: {...el.favoriteDish, ingredients: [...el.favoriteDish.ingredients.map(el=>({...el}))] } }))]}}
+    man7.mother.parents[0].favoriteDish.ingredients[0].title = "xxxxxxxxxxxxx"
+    console.log(man7)
+    console.log(man7FullCopy)
