@@ -53,7 +53,10 @@
     ];
 
 
-    let peopleFullCopy  // your code
+    let peopleFullCopy = people.map(el=> ({...el}))
+    people[0].name = 'sos'
+    console.log(people)
+    console.log(peopleFullCopy)
 
 
     // 6 Array of objects inside object
