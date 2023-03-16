@@ -52,7 +52,6 @@
         {name: "William", age: 28}
     ];
 
-
     let peopleFullCopy = people.map(el=> ({...el}))
     people[0].name = 'sos'
     console.log(people)
@@ -70,7 +69,10 @@
         ]
     };
 
-    let man3FullCopy //  your code
+    let man3FullCopy = {...man3, friends: man3.friends.map(el=>({...el}))}
+    man3.friends[0].age = 55
+    console.log(man3)
+    console.log(man3FullCopy)
 
 
     // 7 Object inside an object, inside an object
@@ -87,7 +89,10 @@
         }
     };
 
-    let man4FullCopy //  your code
+    let man4FullCopy = {...man4, mother: {...man4.mother, work: {...man4.mother.work}}}
+    man4.mother.work.experience = 44
+    console.log(man4)
+    console.log(man4FullCopy)
 
     // 8 Array of objects inside object -> object
     let man5 = {
