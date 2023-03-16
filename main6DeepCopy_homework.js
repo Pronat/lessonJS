@@ -8,15 +8,15 @@
         name: 'John',
         age: 28
     };
-
-    let manFullCopy  //  your code
+    // let manFullCopy  //  your code
+    let manFullCopy = {...man}
+    console.log(manFullCopy)
 
 
     // 2. Array of primitives
     let numbers = [1, 2, 3];
-
-    let numbersFullCopy  //  your code
-
+    let numbersFullCopy = [...numbers]
+    console.log(numbersFullCopy)
 
     // 3. Object inside an object
     let man1 = {
@@ -27,9 +27,8 @@
             age: 50
         }
     };
-
-    let man1FullCopy // your code
-
+    let man1FullCopy = {...man1, mother: {...man1.mother}}
+    console.log(man1FullCopy)
 
     // 4. Array of primitives inside an object
     let man2 = {
