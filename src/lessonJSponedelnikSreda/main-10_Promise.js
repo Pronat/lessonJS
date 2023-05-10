@@ -4,8 +4,8 @@ const server = {
     getData() {
         const promise = new Promise((res, rej) => {
             setTimeout(() => {
-                // res(console.log('some data'))
-                rej(console.log('some err'))
+                res(console.log('some data'))
+                // rej(console.log('some err'))
             } , 2000)
         return promise
         })
@@ -18,6 +18,9 @@ console.log('Promise', pr)
 pr.then((data) => {
     console.log('data from server', data)
 })
-pr.then((err) => {
+.catch((err) => {
     console.log('err from server', err)
+})
+.finally(() => {
+    console.log('finally from server')
 })
