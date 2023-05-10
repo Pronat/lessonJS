@@ -40,8 +40,17 @@ promiseSuper.then((data)=>{
     console.log(data[2])
 })
 
-const promiseSuper2 = Promise.allSettled([promise1, promise2, promise3])  //этому методу ненужно зарезолвить все промисы, если есть ошибка, то оне передает ее в данных
+const promiseSuper2 = Promise.allSettled([promise1, promise2, promise3])  //этому методу ненужно зарезолвить все промисы, если есть ошибка, то оне передает ее в статусе
 promiseSuper2.then((data)=>{
     console.log(data)
 })
+
+const promiseSuper3 = Promise.race([promise1, promise2, promise3])  //едает ее в статусе
+promiseSuper3
+    .then((data)=>{
+    console.log(data)
+})
+    .catch((data)=> {
+        console.log(data)
+    })
 
