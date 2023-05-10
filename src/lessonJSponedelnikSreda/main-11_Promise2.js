@@ -27,3 +27,21 @@ fetch('https://google.com/query=js')
 .then(()=>{
     return fetch('https://duckduckgo.com/query=js')
 })
+
+
+const promise1 = fetch('https://google.com/query=js')
+const promise2 = fetch('https://yahoo.com/query=js')
+const promise3 = fetch('https://duckduckgo.com/query=js')
+
+const promiseSuper = Promise.all([promise1, promise2, promise3])    //метод промисов, не закончится пока не зарезолвятся все промисы
+promiseSuper.then((data)=>{
+    console.log(data[0])
+    console.log(data[1])
+    console.log(data[2])
+})
+
+const promiseSuper2 = Promise.allSettled([promise1, promise2, promise3])  //этому методу ненужно зарезолвить все промисы, если есть ошибка, то оне передает ее в данных
+promiseSuper2.then((data)=>{
+    console.log(data)
+})
+
